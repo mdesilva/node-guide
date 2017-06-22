@@ -1,0 +1,18 @@
+<html>
+<head>
+<link rel="stylesheet" href="assets/styles.css">
+<title> <%= name %> 's Page </title>
+</head>
+<body>
+  <% include partials/nav.ejs %> <!--partial view !-->
+<h1> <%= name %> </h1>
+<h2> Hometown: <%= hometown %> </h2>
+<p> Favorite Subject: <%= subject %> </p>
+<h3> Hobbies </h3>
+<ul>
+  <% hobbies.forEach(function(hobby){ %>
+    <li> <%= hobby %> </li>
+  <% }) %>
+</ul>
+</body>
+</html>

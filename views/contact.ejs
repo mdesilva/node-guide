@@ -1,0 +1,21 @@
+<html>
+<head>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <% include partials/nav.ejs %>
+  <h1> Contact <%= query.dept %></h1>
+  <h3> <%= query.person %> handles queries for this department</h3>
+  <form id='contact-form' method="POST" action="/contact">
+    <label for="person"> Who do you want to contact </label>
+    <input type="text" name="person" value="<%= query.person %>">
+    <label for "dept"> Which department do they reside </label>
+    <input type "text" name="dept" value="<%= query.dept %>">
+    <label for "info"> What do you want to tell them </label>
+    <input type="text" name="info">
+    <label for "email"> Your email </label>
+    <input type="text" name="email">
+    <input type="submit" name="submit">
+  </form>
+</body>
+</html>
